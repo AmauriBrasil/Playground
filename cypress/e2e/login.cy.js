@@ -14,9 +14,9 @@ describe('Login', () => {
     cy.noticeHave('E-mail ou senha incorretos. Por favor, tente novamente!')
   })
 
-  it('Não deve logar com senha incorreta', () => {
+  it('Não deve logar com senha inválida', () => {
     cy.login('papito@cyskills.com.br', '404a404')
-    cy.noticeHave('E-mail ou senha incorreto. Por favor, tente novamente!')
+    cy.noticeHave('E-mail ou senha incorretos. Por favor, tente novamente!')
   })
 
   it('Não deve logar com formato de e-mail incorreto', () => {
